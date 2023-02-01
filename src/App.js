@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 
 import Tasks from './components/Tasks/Tasks';
 import NewTask from './components/NewTask/NewTask';
+// import useHttp from './components/hooks/use-http';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+  // useHttp();
+
   const [error, setError] = useState(null);
   const [tasks, setTasks] = useState([]);
 
