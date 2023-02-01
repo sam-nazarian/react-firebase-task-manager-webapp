@@ -18,7 +18,8 @@ const Tasks = (props) => {
   let content = taskList;
 
   if (props.error) {
-    content = <button onClick={props.onFetch}>Try again</button>;
+    // lates add obj & func as props so that this func gets access to them
+    content = <button onClick={props.onFetch.bind(null, props.obj, props.func)}>Try again</button>;
   }
 
   if (props.loading) {
